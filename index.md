@@ -6,4 +6,4 @@
 ### Frequentist statistics
 
 ## Google Sheets add-on
-[Link|https://chrome.google.com/webstore/detail/stats-machina/obkacnpchmodnejaeaedjmleaphfojbi?utm_source=permalink]
+[Link](https://chrome.google.com/webstore/detail/stats-machina/obkacnpchmodnejaeaedjmleaphfojbi?utm_source=permalink)
