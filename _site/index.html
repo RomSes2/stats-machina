@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
 
 <!-- Begin Jekyll SEO tag v2.4.0 -->
-<title>Stats Machina | An API and Google Sheets add-on for A/B testing statistics</title>
+<title>API | Stats Machina</title>
 <meta name="generator" content="Jekyll v3.7.3" />
-<meta property="og:title" content="Stats Machina" />
+<meta property="og:title" content="API" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="An API and Google Sheets add-on for A/B testing statistics" />
 <meta property="og:description" content="An API and Google Sheets add-on for A/B testing statistics" />
@@ -14,7 +14,7 @@
 <meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="Stats Machina" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/","description":"An API and Google Sheets add-on for A/B testing statistics","name":"Stats Machina","@type":"WebSite","headline":"Stats Machina","@context":"http://schema.org"}</script>
+{"url":"http://localhost:4000/","description":"An API and Google Sheets add-on for A/B testing statistics","name":"Stats Machina","@type":"WebSite","headline":"API","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,32 +38,70 @@
     </section>
 
     <section class="main-content">
-      <ul>
-  <li>API</li>
-  <li>Google Sheets Add-on</li>
-</ul>
+      <h1 id="api">API</h1>
+<p><a href="https://statsmachina.docs.apiary.io/">Documentation</a></p>
 
-<h2 id="api">API</h2>
+<h1 id="google-sheets-add-on">Google Sheets add-on</h1>
+<p><a href="https://chrome.google.com/webstore/detail/stats-machina/obkacnpchmodnejaeaedjmleaphfojbi?utm_source=permalink">Link</a> | <a href="#functions-reference">Functions Reference</a></p>
 
-<h3 id="frequentist-statistics">Frequentist statistics</h3>
+<h2 id="functions-reference">Functions Reference</h2>
 
-<h2 id="google-sheets-add-on">Google Sheets add-on</h2>
-<p><a href="https://chrome.google.com/webstore/detail/stats-machina/obkacnpchmodnejaeaedjmleaphfojbi?utm_source=permalink">Link</a> | <a href="">Functions Reference</a></p>
-
-<h3 id="functions-reference">Functions Reference</h3>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">AB_CONFIDENCE</span><span class="p">(</span><span class="n">control_users</span><span class="p">,</span> <span class="n">control_conversions</span><span class="p">,</span> <span class="n">variant_users</span><span class="p">,</span> <span class="n">variant_conversions</span><span class="p">)</span>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">AB_CONFIDENCE</span><span class="p">(</span><span class="n">control_users</span><span class="p">,</span> <span class="n">control_conversions</span><span class="p">,</span> <span class="n">variant_users</span><span class="p">,</span> <span class="n">variant_conversions</span><span class="p">,</span> <span class="n">confidence_level</span><span class="p">)</span>
 </code></pre></div></div>
+
+<blockquote>
+  <p>Returns the confidence level: percentage chance that the observed uplift is statistically significant.</p>
+</blockquote>
+
+<p>Parameters (<a href="#definitions">definitions</a>):</p>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" /><code class="highlighter-rouge">control_users</code> – required</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" /><code class="highlighter-rouge">control_conversions</code> – required</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" /><code class="highlighter-rouge">variant_users</code> – required</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" /><code class="highlighter-rouge">control_conversions</code> – required</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="highlighter-rouge">confidence_level</code> – optional</li>
+</ul>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">AB_UPLIFT</span><span class="p">(</span><span class="n">control_users</span><span class="p">,</span> <span class="n">control_conversions</span><span class="p">,</span> <span class="n">variant_users</span><span class="p">,</span> <span class="n">variant_conversions</span><span class="p">)</span>
 </code></pre></div></div>
 
+<blockquote>
+  <p>Returns the uplift in conversion rates between control and a variant.</p>
+</blockquote>
+
+<p>Parameters (<a href="#definitions">definitions</a>):</p>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" /><code class="highlighter-rouge">control_users</code> – required</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" /><code class="highlighter-rouge">control_conversions</code> – required</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" /><code class="highlighter-rouge">variant_users</code> – required</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" /><code class="highlighter-rouge">control_conversions</code> – required</li>
+</ul>
+
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">AB_CONVERSIONRATE</span><span class="p">(</span><span class="n">users</span><span class="p">,</span> <span class="n">conversions</span><span class="p">)</span>
 </code></pre></div></div>
 
+<blockquote>
+  <p>Returns the conversion rate of a variant.</p>
+</blockquote>
+
+<p>Parameters (<a href="#definitions">definitions</a>):</p>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" /><code class="highlighter-rouge">users</code> – required</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" /><code class="highlighter-rouge">conversions</code> – required</li>
+</ul>
+
+<h1 id="definitions">Definitions</h1>
+
+<ul>
+  <li><code class="highlighter-rouge">users</code> – The number of unique users who met the targeting criteria to enter the test.</li>
+  <li><code class="highlighter-rouge">conversions</code> – The number of unique conversions (i.e. number of users who completed a goal at least once).</li>
+  <li><code class="highlighter-rouge">confidence_level</code> – Default: 0.95 – The level of confidence required to deem an observed uplift statistically significant.</li>
+</ul>
+
 
       <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://statsmachina.docs.apiary.io/">Documentation</a>.</span>
+        <div><a href="https://statsmachina.docs.apiary.io/">API Documentation</a></div>
+        <div><a href="https://chrome.google.com/webstore/detail/stats-machina/obkacnpchmodnejaeaedjmleaphfojbi?utm_source=permalink">Google Sheets Add-on</a></div>
       </footer>
     </section>
 
