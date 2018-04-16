@@ -16,7 +16,7 @@ Parameters ([definitions](#definitions)):
 - [x] `control_users` -- required
 - [x] `control_conversions` -- required
 - [x] `variant_users` -- required
-- [x] `control_conversions` -- required
+- [x] `variant_conversions` -- required
 - [ ] `confidence_level` -- optional
 
 ```ruby
@@ -29,7 +29,7 @@ Parameters ([definitions](#definitions)):
 - [x] `control_users` -- required
 - [x] `control_conversions` -- required
 - [x] `variant_users` -- required
-- [x] `control_conversions` -- required
+- [x] `variant_conversions` -- required
 
 ```ruby
 AB_CONVERSIONRATE(users, conversions)
